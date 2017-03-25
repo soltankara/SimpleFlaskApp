@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+
+</head>
+<body>
+	
+	<form method="POST" action="/create">
+		<input type="submit" name="add a post" id="submit">
+	</form>
+	<center>
+		{% for example in examples %}
+		<hr>
+		<h1>{{ example.id }}</h1> - <h1>{{ example.data }}</h1>
+		<hr>
+		{% endfor %}
+	</center>
+
+	
+
+</body>
+</html>
